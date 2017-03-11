@@ -1,22 +1,32 @@
 class MultipleChoiceView {
     constructor($container, currStage, callbacks) {
         this.$container = $container;
-        
+
         // In the next parts, we create the template string we want to append to the DOM;
         let choicesTemplate = ''; // Creates a list of buttons; initialize as empty string
-        for(let choice of currStage.content.choices) {
-            /* 
-             * Using the back tick character -> ` 
+        for(let choice of currStage.content.choices) { //for(String choice : choices)
+            /*
+             * Using the back tick character -> `
              * It allows you to easily insert a ${YOUR_VARIABLE} inside your string.
              * It's nice cos you can write it in multiple lines too.
              * In this case, We also define a specific class to differentiate each button (used in event binding).
              */
             choicesTemplate += `
-                <button class="stage-mc-btn-${choice.text} stage-mc-btn">
+                <button class="js-stage-mc-btn-${choice.text} stage-mc-btn">
                     ${choice.text}
                 </button>`;
         }
-
+/*
+        <button class="stage-mc-btn-ANXIOUS stage-mc-btn">
+            ANXIOUS
+        </button>
+        <button class="stage-mc-btn-x stage-mc-btn">
+            x
+        </button>
+        <button class="stage-mc-btn-d stage-mc-btn">
+            d
+        </button>
+*/
         // If there is a previous stage, add the back button to the template
         let backBtnTemplate = '';
         if (currStage.prev) {
@@ -48,13 +58,14 @@ class MultipleChoiceView {
         for(let choice of currStage.content.choices) {
             // each of the button leads you to a different page
             let nextStage = currStage.next[choice.nextIndex];
-            document.querySelector(`.stage-mc-btn-${choice.text}`).onclick = () => {
+            document.querySelector(`.js-stage-mc-btn-${choice.text}`).onclick = () => {
                 callbacks.next(currStage, nextStage);
             };
         }
     }
 
+    //Dont forget me!
     destroy() {
-        this.$container.empty(); 
+        this.$container.empty();
     }
 }
