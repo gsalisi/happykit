@@ -6,7 +6,6 @@ const STAGE_TYPE = {
     PIC_TYPE: 'pic_type',
 };
 
-
 class HappyKitModel {
     constructor() {
         this.BreatheStage = {
@@ -27,9 +26,9 @@ Repeat for 5 cycles, or as many times as needed.`
           type: STAGE_TYPE.TEXT_TYPE,
           prev: null,
           next: null,
-          title: '',
+          title: 'We know it’s cliche, but it’s true.',
           content: {
-
+            blurb: 'You’re not alone! Everyone feels nervous or worried at some time. You’ve probably felt that your anxiety preoccupies your thoughts or even interferes with your daily life. Try asking friends, family, coworkers, or even strangers what they do when they’re anxious. Likely, everyone you ask will have some stories to share with you and probably some tips! Remember, for every emotion you’re feeling, there’s someone that can relate!'
           }
         }
 
@@ -48,10 +47,12 @@ Repeat for 5 cycles, or as many times as needed.`
             type: STAGE_TYPE.PIC_TYPE,
             prev: null,
             next: null,
-            title: '...',
-            content: {
-
-            }
+            title: 'Ahhh. Nature.',
+            content: [
+              {icon: 'https://static.pexels.com/photos/1852/dawn-landscape-mountains-nature.jpg'},
+              {icon: 'https://static.pexels.com/photos/27403/pexels-photo-27403.jpg'},
+              {icon: 'https://static.pexels.com/photos/103567/pexels-photo-103567.jpeg'},
+          ]
         };
 
         this.CartoonPicStage = {
@@ -60,18 +61,15 @@ Repeat for 5 cycles, or as many times as needed.`
             next: null,
             title: '',
             content: {
+
+              choices: [
+                {icon: 'http://assets.amuniversal.com/053cf9e0df4401345b62005056a9545d'},
+                {icon: 'http://assets.amuniversal.com/0a450570df4401345b62005056a9545d'},
+                {icon: 'http://assets.amuniversal.com/0f2aa560df4401345b62005056a9545d'},
+              ]
+
             }
         };
-
-        this.UpFact2Stage = {
-          type: STAGE_TYPE.TEXT_TYPE,
-          prev: null,
-          next: null,
-          title: '',
-          content: {
-
-          }
-        }
 
          this.VisualStage = {
             type: STAGE_TYPE.MC_TYPE,
@@ -92,6 +90,7 @@ Repeat for 5 cycles, or as many times as needed.`
               video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mRf3-JkwqfU" frameborder="0" allowfullscreen></iframe>',
             }
         };
+
 
         this.UpFact5 = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -180,7 +179,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Calming piano music.',
           content: {}
-        }
+        };
 
         this.UpFact3Stage = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -188,7 +187,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Did you know?',
           content: {}
-        }
+        };
 
         this.DanceVidStage = {
           type: STAGE_TYPE.VIDEO_TYPE,
@@ -196,7 +195,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Get up and moving to lift up your mood!',
           content: {}
-        }
+        };
 
         this.FunnyPicStage = {
           type: STAGE_TYPE.PIC_TYPE,
@@ -204,7 +203,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Funny picture',
           content: {}
-        }
+        };
 
         this.UpFact4Stage = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -212,6 +211,9 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Did you know?',
           content: {}
-        }
+  
+        };
+
+ 
     }
 }

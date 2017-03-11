@@ -28,6 +28,8 @@ function main() {
             currentView = new MultipleChoiceView($container, stage, callbacks);
         } else if (stage.type === STAGE_TYPE.TEXT_TYPE) {
             currentView = new TextView($container, stage, callbacks);
+        } else if (stage.type === STAGE_TYPE.PIC_TYPE) {
+            currentView = new PictureView($container, stage, callbacks);
         } else if (stage.type === STAGE_TYPE.AUDIO_TYPE) {
             currentView = new AudioView($container, stage, callbacks);
         } else if (stage.type === STAGE_TYPE.VIDEO_TYPE) {
@@ -42,6 +44,7 @@ function main() {
     let model = new HappyKitModel();
     let currentView;
 
-    createView(model.CuteVidStage)
+    createView(model.initStage)
+
 }
 main();
