@@ -36,9 +36,9 @@ class MultipleChoiceView {
         // Creates the title and appended with the list of choices above.
         const template = `
             ${backBtnTemplate}
-            <div class="stage-title stage-title-multiplechoice">
+            <h2 class="stage-title stage-title-multiplechoice">
                 ${currStage.title}
-            </div>
+            </h2>
             ${choicesTemplate}
         `;
 
@@ -58,7 +58,7 @@ class MultipleChoiceView {
         for(let choice of currStage.content.choices) {
             // each of the button leads you to a different page
             let nextStage = currStage.next[choice.nextIndex];
-            document.querySelector(`.stage-mc-btn-${choice.text}`).onclick = () => {
+            document.querySelector(`.js-mc-btn-${choice.text}`).onclick = () => {
                 callbacks.next(currStage, nextStage);
             };
         }

@@ -149,13 +149,13 @@ Repeat for 5 cycles, or as many times as needed.`
             title: 'How are you feeling today?',
             content: {
                 choices: [{
-                    text: 'Sad',
-                    icon: 'http://sadface.png',
-                    nextIndex: 2
-                }, {
                     text: 'Anxious',
                     icon: '',
                     nextIndex: 0
+                }, {
+                    text: 'Sad',
+                    icon: 'http://sadface.png',
+                    nextIndex: 2
                 }, {
                     text: 'Stressed',
                     icon: '',
