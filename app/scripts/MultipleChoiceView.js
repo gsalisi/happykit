@@ -12,7 +12,7 @@ class MultipleChoiceView {
              * In this case, We also define a specific class to differentiate each button (used in event binding).
              */
             choicesTemplate += `
-                <button class="js-stage-mc-btn-${choice.text} stage-mc-btn">
+                <button class="js-mc-btn-${choice.text} stage-mc-btn">
                     ${choice.text}
                 </button>`;
         }
@@ -58,7 +58,7 @@ class MultipleChoiceView {
         for(let choice of currStage.content.choices) {
             // each of the button leads you to a different page
             let nextStage = currStage.next[choice.nextIndex];
-            document.querySelector(`.js-stage-mc-btn-${choice.text}`).onclick = () => {
+            document.querySelector(`.stage-mc-btn-${choice.text}`).onclick = () => {
                 callbacks.next(currStage, nextStage);
             };
         }
