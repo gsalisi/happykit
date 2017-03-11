@@ -30,6 +30,10 @@ function main() {
             currentView = new TextView($container, stage, callbacks);
         } else if (stage.type === STAGE_TYPE.PIC_TYPE) {
             currentView = new PictureView($container, stage, callbacks);
+        } else if (stage.type === STAGE_TYPE.AUDIO_TYPE) {
+            currentView = new AudioView($container, stage, callbacks);
+        } else if (stage.type === STAGE_TYPE.VIDEO_TYPE) {
+            currentView = new VideoView($container, stage, callbacks)
         }
         // Add different types of stages here...
         // - Also need to create a new view file for every STAGE_TYPE
@@ -40,6 +44,7 @@ function main() {
     let model = new HappyKitModel();
     let currentView;
 
-    createView(model.NaturePicStage)
+    createView(model.initStage)
+
 }
 main();

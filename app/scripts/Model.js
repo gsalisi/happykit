@@ -35,10 +35,11 @@ Repeat for 5 cycles, or as many times as needed.`
         this.RainMusicStage = {
           type: STAGE_TYPE.AUDIO_TYPE,
           prev: null,
-          null: null,
-          title: '',
+          next: null,
+          title: 'Falling rain to calm the mind.',
           content: {
-            //
+            audio: '/music/RainMusic.mp3',
+            icon: '/images/rain_img.jpg',
           }
         }
 
@@ -60,11 +61,13 @@ Repeat for 5 cycles, or as many times as needed.`
             next: null,
             title: '',
             content: {
+
               choices: [
                 {icon: 'http://assets.amuniversal.com/053cf9e0df4401345b62005056a9545d'},
                 {icon: 'http://assets.amuniversal.com/0a450570df4401345b62005056a9545d'},
                 {icon: 'http://assets.amuniversal.com/0f2aa560df4401345b62005056a9545d'},
               ]
+
             }
         };
 
@@ -82,11 +85,12 @@ Repeat for 5 cycles, or as many times as needed.`
             type: STAGE_TYPE.VIDEO_TYPE,
             prev: null,
             next: null,
-            title: 'CuteVidStage',
+            title: 'Puppies!',
             content: {
-                choices: []
+              video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mRf3-JkwqfU" frameborder="0" allowfullscreen></iframe>',
             }
         };
+
 
         this.UpFact5 = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -207,7 +211,9 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Did you know?',
           content: {}
+  
         };
 
+ 
     }
 }
