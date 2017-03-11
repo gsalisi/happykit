@@ -1,25 +1,24 @@
 function main() {
-    let $container = $('.container');
-    let model = new HappyKitModel();
-
-    let currentView;
-    
+    // Previous call back; draws the previous stage
     function prevCb(prevStage) {
         currentView.destroy();
-        drawStage(prevStage);
+        createView(prevStage);
     }
 
+    // Next stage call back; draws the next stage also provides a back pointer to the previous stage
     function nextCb(currStage, nextStage) {
         nextStage.prev = currStage;
         currentView.destroy();
-        drawStage(nextStage);
+        createView(nextStage);
     }
 
+    // Call back to reset/ or when the app is done
     function doneCb() {
         console.log('done')
     }
 
-    function drawStage(stage) {
+    // Creates the view for each stage
+    function createView(stage) {
         const callbacks = {
             prev: prevCb,
             next: nextCb,
@@ -28,12 +27,14 @@ function main() {
         if (stage.type == STAGE_TYPE.MC_TYPE) {
             currentView = new MultipleChoiceView($container, stage, callbacks);
         }
+        // Add different types of stages here...
+        // - Also need to create a new view file for every STAGE_TYPE
+        // - Dont forget to add the script tag to the index.html
     }
 
-
-    console.log('Test')
-    
-    
-    drawStage(model.initStage)
+    let $container = $('.container');
+    let model = new HappyKitModel();
+    let currentView;
+    createView(model.initStage)
 }
 main();   

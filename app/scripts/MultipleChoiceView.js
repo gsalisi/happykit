@@ -44,8 +44,9 @@ class MultipleChoiceView {
             };
         }
 
-        // Add onclick listeners for each choice
+        // Add onclick listeners for each choice button
         for(let choice of currStage.content.choices) {
+            // each of the button leads you to a different page
             let nextStage = currStage.next[choice.nextIndex];
             document.querySelector(`.stage-mc-btn-${choice.text}`).onclick = () => {
                 callbacks.next(currStage, nextStage);
