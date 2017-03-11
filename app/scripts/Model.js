@@ -1,23 +1,89 @@
 const STAGE_TYPE = {
     MC_TYPE: 'mc_type',
     TEXT_TYPE: 'text_type',
+<<<<<<< HEAD
     VIDEO_TYPE: 'media_type',
     AUDIO_TYPE: 'audio_type'
     PIC_TYPE: 'pic_type'
+=======
+    VIDEO_TYPE: 'video_type',
+    AUDIO_TYPE: 'audio_type',
+    PIC_TYPE: 'pic_type',
+>>>>>>> master
 };
 
 
 class HappyKitModel {
     constructor() {
         this.BreatheStage = {
-            type: STAGE_TYPE.MC_TYPE,
+            type: STAGE_TYPE.TEXT_TYPE,
             prev: null,
             next: null,
+<<<<<<< HEAD
             title: 'BreatheStage',
             content: {
                 choices: []
+=======
+            title: 'Let\'s Breathe.',
+            content: {
+              blurb: `Let go of the tension in your hands. Now, drop your shoulders and let your jaw relax. </br>
+Keep your shoulders down and allow your stomach to expand as you breathe in through your nose and count to four.</br>
+Hold the breath for a moment. You’re doing great. </br>
+Now release your breath slowly and smoothly as you count to seven. </br>
+Repeat for 5 cycles, or as many times as needed.`
             }
         };
+
+        this.UpFact1Stage = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
+
+        this.RainMusicStage = {
+          type: STAGE_TYPE.AUDIO_TYPE,
+          prev: null,
+          null: null,
+          title: '',
+          content: {
+            //
+          }
+        }
+
+        this.NaturePicStage = {
+            type: STAGE_TYPE.PIC_TYPE,
+            prev: null,
+            next: null,
+            title: '...',
+            content: {
+
+            }
+        };
+
+        this.CartoonPicStage = {
+            type: STAGE_TYPE.PIC_TYPE,
+            prev: null,
+            next: null,
+            title: '',
+            content: {
+
+>>>>>>> master
+            }
+        };
+
+        this.UpFact2Stage = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
 
          this.VisualStage = {
             type: STAGE_TYPE.MC_TYPE,
@@ -30,15 +96,72 @@ class HappyKitModel {
         };
 
         this.CuteVidStage = {
-            type: STAGE_TYPE.MC_TYPE,
+            type: STAGE_TYPE.VIDEO_TYPE,
             prev: null,
             next: null,
             title: 'CuteVidStage',
             content: {
+<<<<<<< HEAD
                 choices: []
             }
         };
 
+=======
+
+            }
+        };
+
+        this.UpFact5 = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
+
+        this.FunnyVidStage = {
+          type: STAGE_TYPE.MEDIA_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
+
+        this.FunJokeStage = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
+
+        this.NatureMusicStage = {
+          type: STAGE_TYPE.AUDIO_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
+
+        this.UpFact6 = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: '',
+          content: {
+
+          }
+        }
+
+>>>>>>> master
         this.initStage = {
             type: STAGE_TYPE.MC_TYPE,
             prev: null,
@@ -60,6 +183,7 @@ class HappyKitModel {
                 }]
             }
         };
+<<<<<<< HEAD
 
         this.VisualizationStage = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -109,5 +233,7 @@ class HappyKitModel {
           title: 'Did you know?',
           content: {}
         }
+=======
+>>>>>>> master
     }
 }
