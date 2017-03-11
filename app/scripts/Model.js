@@ -1,9 +1,15 @@
 const STAGE_TYPE = {
     MC_TYPE: 'mc_type',
     TEXT_TYPE: 'text_type',
+<<<<<<< HEAD
+    VIDEO_TYPE: 'media_type',
+    AUDIO_TYPE: 'audio_type'
+    PIC_TYPE: 'pic_type'
+=======
     VIDEO_TYPE: 'video_type',
     AUDIO_TYPE: 'audio_type',
     PIC_TYPE: 'pic_type',
+>>>>>>> master
 };
 
 class HappyKitModel {
@@ -12,6 +18,11 @@ class HappyKitModel {
             type: STAGE_TYPE.TEXT_TYPE,
             prev: null,
             next: null,
+<<<<<<< HEAD
+            title: 'BreatheStage',
+            content: {
+                choices: []
+=======
             title: 'Let\'s Breathe.',
             content: {
               blurb: `Let go of the tension in your hands. Now, drop your shoulders and let your jaw relax. </br>
@@ -60,11 +71,16 @@ Repeat for 5 cycles, or as many times as needed.`
             next: null,
             title: '',
             content: {
+<<<<<<< HEAD
               choices: [
                 {icon: 'http://assets.amuniversal.com/053cf9e0df4401345b62005056a9545d'},
                 {icon: 'http://assets.amuniversal.com/0a450570df4401345b62005056a9545d'},
                 {icon: 'http://assets.amuniversal.com/0f2aa560df4401345b62005056a9545d'},
               ]
+=======
+
+>>>>>>> master
+>>>>>>> Regina
             }
         };
 
@@ -84,6 +100,12 @@ Repeat for 5 cycles, or as many times as needed.`
             next: null,
             title: 'CuteVidStage',
             content: {
+<<<<<<< HEAD
+                choices: []
+            }
+        };
+
+=======
 
             }
         };
@@ -138,6 +160,7 @@ Repeat for 5 cycles, or as many times as needed.`
           }
         }
 
+>>>>>>> master
         this.initStage = {
             type: STAGE_TYPE.MC_TYPE,
             prev: null,
@@ -159,5 +182,57 @@ Repeat for 5 cycles, or as many times as needed.`
                 }]
             }
         };
+<<<<<<< HEAD
+
+        this.VisualizationStage = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: 'Let\'s start with some visual exercises.',
+          content: {}
+
+        };
+
+        this.PianoMusicStage = {
+          type: STAGE_TYPE.AUDIO_TYPE,
+          prev: null,
+          next: null,
+          title: 'Calming piano music.',
+          content: {}
+        }
+
+        this.UpFact3Stage = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: 'Did you know?',
+          content: {}
+        }
+
+        this.DanceVidStage = {
+          type: STAGE_TYPE.VIDEO_TYPE,
+          prev: null,
+          next: null,
+          title: 'Get up and moving to lift up your mood!',
+          content: {}
+        }
+
+        this.FunnyPicStage = {
+          type: STAGE_TYPE.PIC_TYPE,
+          prev: null,
+          next: null,
+          title: 'Funny picture',
+          content: {}
+        }
+
+        this.UpFact4Stage = {
+          type: STAGE_TYPE.TEXT_TYPE,
+          prev: null,
+          next: null,
+          title: 'Did you know?',
+          content: {}
+        }
+=======
+>>>>>>> master
     }
 }
