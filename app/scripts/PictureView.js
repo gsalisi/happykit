@@ -1,7 +1,6 @@
-class TextView {
+class PictureView {
     constructor($container, currStage, callbacks) {
         this.$container = $container;
-
 
         // If there is a previous stage, add the back button to the template
         let backBtnTemplate = '';
@@ -9,19 +8,22 @@ class TextView {
             backBtnTemplate = `<button class="js-stage-back-btn">Back</button>`
         }
 
-        const textTemplate = `
-          <p class="stage-text-blurb">${currStage.content.blurb}</p>
-        `;
+        let pictureTemplate = '';
+        for(let source of currStage.content) {
+
+          pictureTemplate += `<img src="${source.icon}" width="700">`;
+        }
+
 
         const nextBtn = `<button class="js-stage-next-btn">Next</button>`
 
         // Creates the title and appended with the list of choices above.
         const template = `
             ${backBtnTemplate}
-            <h2 class="stage-title stage-title-textblurb">
+            <h2 class="stage-title stage-title-multiplechoice">
                 ${currStage.title}
             </h2>
-            ${textTemplate}
+            ${pictureTemplate}
             ${nextBtn}
         `;
 
