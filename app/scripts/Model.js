@@ -10,8 +10,8 @@ class HappyKitModel {
     constructor() {
         this.BreatheStage = {
             type: STAGE_TYPE.TEXT_TYPE,
-            prev: null,
-            next: null,
+            prev: this.initStage,
+            next: this.UpFact1Stage,
             title: 'Let\'s Breathe.',
             content: {
               blurb: `Let go of the tension in your hands. Now, drop your shoulders and let your jaw relax. </br>
@@ -24,8 +24,8 @@ Repeat for 5 cycles, or as many times as needed.`
 
         this.UpFact1Stage = {
           type: STAGE_TYPE.TEXT_TYPE,
-          prev: null,
-          next: null,
+          prev: this.BreatheStage,
+          next: this.RainMusicStage,
           title: 'We know it’s cliche, but it’s true.',
           content: {
             blurb: 'You’re not alone! Everyone feels nervous or worried at some time. You’ve probably felt that your anxiety preoccupies your thoughts or even interferes with your daily life. Try asking friends, family, coworkers, or even strangers what they do when they’re anxious. Likely, everyone you ask will have some stories to share with you and probably some tips! Remember, for every emotion you’re feeling, there’s someone that can relate!'
@@ -34,8 +34,8 @@ Repeat for 5 cycles, or as many times as needed.`
 
         this.RainMusicStage = {
           type: STAGE_TYPE.AUDIO_TYPE,
-          prev: null,
-          next: null,
+          prev: this.UpFact1Stage,
+          next: this.NaturePicStage,
           title: 'Falling rain to calm the mind.',
           content: {
             audio: '/music/RainMusic.mp3',
@@ -59,16 +59,13 @@ Repeat for 5 cycles, or as many times as needed.`
             type: STAGE_TYPE.PIC_TYPE,
             prev: null,
             next: null,
-            title: '',
-            content: {
-
-              choices: [
-                {icon: 'http://assets.amuniversal.com/053cf9e0df4401345b62005056a9545d'},
-                {icon: 'http://assets.amuniversal.com/0a450570df4401345b62005056a9545d'},
-                {icon: 'http://assets.amuniversal.com/0f2aa560df4401345b62005056a9545d'},
+            title: 'Time For Some Laughs.',
+            content:
+              [
+                {icon: '/images/icon1.gif'},
+                {icon: '/images/icon2.gif'},
+                {icon: '/images/icon3.gif'},
               ]
-
-            }
         };
 
          this.VisualStage = {
@@ -211,9 +208,15 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Did you know?',
           content: {}
-  
-        };
 
- 
+        };
+        this.BreatheStage.next = this.UpFact1Stage
+        this.UpFact1Stage.next = this.RainMusicStage
+        this.RainMusicStage.next = this.NaturePicStage
+        this.NaturePicStage.next = this.CuteVidStage
+        this.CuteVidStage.next = this.CartoonPicStage
+        this.CartoonPicStage.next = this.initStage
+
     }
+
 }
