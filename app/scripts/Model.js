@@ -1,15 +1,9 @@
 const STAGE_TYPE = {
     MC_TYPE: 'mc_type',
     TEXT_TYPE: 'text_type',
-<<<<<<< HEAD
-    VIDEO_TYPE: 'media_type',
-    AUDIO_TYPE: 'audio_type'
-    PIC_TYPE: 'pic_type'
-=======
     VIDEO_TYPE: 'video_type',
     AUDIO_TYPE: 'audio_type',
     PIC_TYPE: 'pic_type',
->>>>>>> master
 };
 
 class HappyKitModel {
@@ -100,13 +94,7 @@ Repeat for 5 cycles, or as many times as needed.`
             next: null,
             title: 'CuteVidStage',
             content: {
-<<<<<<< HEAD
                 choices: []
-            }
-        };
-
-=======
-
             }
         };
 
@@ -160,7 +148,6 @@ Repeat for 5 cycles, or as many times as needed.`
           }
         }
 
->>>>>>> master
         this.initStage = {
             type: STAGE_TYPE.MC_TYPE,
             prev: null,
@@ -182,7 +169,6 @@ Repeat for 5 cycles, or as many times as needed.`
                 }]
             }
         };
-<<<<<<< HEAD
 
         this.VisualizationStage = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -232,7 +218,7 @@ Repeat for 5 cycles, or as many times as needed.`
           title: 'Did you know?',
           content: {}
         }
-=======
->>>>>>> master
+
     }
+}
 }
