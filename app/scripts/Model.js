@@ -12,11 +12,6 @@ class HappyKitModel {
             type: STAGE_TYPE.TEXT_TYPE,
             prev: null,
             next: null,
-<<<<<<< HEAD
-            title: 'BreatheStage',
-            content: {
-                choices: []
-=======
             title: 'Let\'s Breathe.',
             content: {
               blurb: `Let go of the tension in your hands. Now, drop your shoulders and let your jaw relax. </br>
@@ -65,16 +60,11 @@ Repeat for 5 cycles, or as many times as needed.`
             next: null,
             title: '',
             content: {
-<<<<<<< HEAD
               choices: [
                 {icon: 'http://assets.amuniversal.com/053cf9e0df4401345b62005056a9545d'},
                 {icon: 'http://assets.amuniversal.com/0a450570df4401345b62005056a9545d'},
                 {icon: 'http://assets.amuniversal.com/0f2aa560df4401345b62005056a9545d'},
               ]
-=======
-
->>>>>>> master
->>>>>>> Regina
             }
         };
 
@@ -185,7 +175,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Calming piano music.',
           content: {}
-        }
+        };
 
         this.UpFact3Stage = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -193,7 +183,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Did you know?',
           content: {}
-        }
+        };
 
         this.DanceVidStage = {
           type: STAGE_TYPE.VIDEO_TYPE,
@@ -201,7 +191,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Get up and moving to lift up your mood!',
           content: {}
-        }
+        };
 
         this.FunnyPicStage = {
           type: STAGE_TYPE.PIC_TYPE,
@@ -209,7 +199,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Funny picture',
           content: {}
-        }
+        };
 
         this.UpFact4Stage = {
           type: STAGE_TYPE.TEXT_TYPE,
@@ -217,8 +207,7 @@ Repeat for 5 cycles, or as many times as needed.`
           next: null,
           title: 'Did you know?',
           content: {}
-        }
+        };
 
     }
-}
 }
