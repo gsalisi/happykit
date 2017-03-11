@@ -24,8 +24,10 @@ function main() {
             next: nextCb,
             done: doneCb
         }
-        if (stage.type == STAGE_TYPE.MC_TYPE) {
+        if (stage.type === STAGE_TYPE.MC_TYPE) {
             currentView = new MultipleChoiceView($container, stage, callbacks);
+        } else if (stage.type === STAGE_TYPE.TEXT_TYPE) {
+            currentView = new TextView($container, stage, callbacks);
         }
         // Add different types of stages here...
         // - Also need to create a new view file for every STAGE_TYPE
@@ -35,6 +37,7 @@ function main() {
     let $container = $('.container');
     let model = new HappyKitModel();
     let currentView;
+
     createView(model.initStage)
 }
-main();   
+main();
