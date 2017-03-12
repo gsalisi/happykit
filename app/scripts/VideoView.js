@@ -9,7 +9,7 @@ class VideoView {
             backBtnTemplate = `<a class="btn-floating btn-med waves-effect waves-light btn js-stage-back-btn hpkt-btn red darken-1"><</a>`
         }
 
-        const videoTemplate = currStage.content.video;
+        const videoTemplate = `<div>${currStage.content.video}</div>`;
 
         const nextBtn = `<a class="waves-effect waves-light btn js-stage-next-btn hpkt-btn green darken-2">Next</button>`
 
