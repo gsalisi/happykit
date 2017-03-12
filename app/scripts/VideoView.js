@@ -6,12 +6,12 @@ class VideoView {
         // If there is a previous stage, add the back button to the template
         let backBtnTemplate = '';
         if (currStage.prev) {
-            backBtnTemplate = `<button class="js-stage-back-btn">Back</button>`
+            backBtnTemplate = `<a class="btn-floating btn-med waves-effect waves-light btn js-stage-back-btn hpkt-btn red darken-1"><</a>`
         }
 
         const videoTemplate = currStage.content.video;
 
-        const nextBtn = `<button class="js-stage-next-btn">Next</button>`
+        const nextBtn = `<a class="waves-effect waves-light btn js-stage-next-btn hpkt-btn green darken-2">Next</button>`
 
         // Creates the title and appended with the list of choices above.
         const template = `

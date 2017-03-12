@@ -12,9 +12,7 @@ class MultipleChoiceView {
              * In this case, We also define a specific class to differentiate each button (used in event binding).
              */
             choicesTemplate += `
-                <button class="js-mc-btn-${choice.text} stage-mc-btn">
-                    ${choice.text}
-                </button>`;
+                <a class="waves-effect waves-light btn js-mc-btn-${choice.text} hpkt-btn ">${choice.text}</a>`;
         }
 /*
         <button class="stage-mc-btn-ANXIOUS stage-mc-btn">
@@ -30,7 +28,7 @@ class MultipleChoiceView {
         // If there is a previous stage, add the back button to the template
         let backBtnTemplate = '';
         if (currStage.prev) {
-            backBtnTemplate = `<button class="stage-back-btn">Back</button>`
+            backBtnTemplate = `<a class="waves-effect waves-light btn">Back</a>`
         }
 
         // Creates the title and appended with the list of choices above.

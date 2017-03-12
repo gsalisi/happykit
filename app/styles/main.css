@@ -4,9 +4,10 @@ h2 {
 
 /* Space out content a bit */
 body {
-  font-family: 'Droid Serif', serif;
+  font-family: 'Signika', serif;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  background-color: rgb(245, 242, 240)
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -14,6 +15,15 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
+}
+
+.hpkt-btn {
+  margin-bottom: 20px;
+  color: white !important;
+}
+
+audio {
+  display: block;
 }
 
 /* Customize container */
