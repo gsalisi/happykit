@@ -26,6 +26,10 @@ audio {
   display: block;
 }
 
+img {
+  display: block;
+}
+
 /* Customize container */
 @media (min-width: 48em) {
 }
